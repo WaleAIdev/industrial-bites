@@ -184,6 +184,23 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2493.932530170796!2d6.729650415949289!3d51.23965217958956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8cac17301c3a7%3A0xa28f8f9bf0ee83ac!2sAreal%20B%C3%B6hler!5e0!3m2!1sen!2sde!4v1685279318082!5m2!1sen!2sde">
     </iframe>
   </section>
+  
+   <!-- ░░ SCRIPTS ░░ -->
+  <script>
+    /* Show floating ticket button after scrolling ~60 % of viewport height */
+    const ticketFloat = document.getElementById('ticketFloat');
+    window.addEventListener('scroll', () => {
+      (window.scrollY > window.innerHeight * 0.6)
+        ? ticketFloat.classList.remove('opacity-0','pointer-events-none')
+        : ticketFloat.classList.add('opacity-0','pointer-events-none');
+    });
+
+    /* Mobile menu toggle */
+    const menuBtn   = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+  </script> 
+  
  <script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="CGEXBSvyUrgAc7Lw__QdG";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>       
